@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profile - DownDrive</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/dropdown-search-bs4.css">
+    <link rel="stylesheet" href="assets/css/User-Information-Panel---Lite--Secondary-User-Panel-Footer.css">
+</head>
+
+<body id="page-top">
+
+<!--    js for loading user data-->
+
+
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>DownDrive</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="/dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/profile"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="/table"><i class="fas fa-window-maximize"></i>History</a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+
+                    <div style="display: flex;width: 50%;flex-direction: row;margin-left: 20px;">
+                        <button onclick="handleSignoutReq()" class="btn  d-block btn-user w-10 m-40"  type="submit" >Signout</button>
+
+                    </div>
+                    <div style="display: flex;width: 50%;flex-direction: row-reverse;margin-right: 20px;">
+                        <button onclick="handleDeleteReq()" class="btn btn-danger d-block btn-user w-10 m-40"  type="submit" >Delete Account</button>
+
+                    </div>
+
+
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Profile</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/dogs/image2.jpeg" width="160" height="160">
+                                    <div class="mb-3"></div>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4" justify-content="center">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary fw-bold m-0">Summary</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Total Bandwidth Allowed </th>
+                                                    <th>Bandwidth consumed</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td id = "total_band"></td>
+                                                    <td id = "con_band"></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex media">
+                                        <div><img class="rounded-circle me-3" id="userphoto" style="height: 50px;width: 50px;" src="assets/img/user-photo2.jpg"></div>
+                                        <div class="media-body">
+                                            <ul class="list-unstyled fa-ul">
+                                                <li><i class="fa fa-user fa-li"></i><a id="username" href="#"></a></li>
+                                                <li><i class="fa fa-envelope fa-li"></i><a id="useremail" href="#"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div> Remaining Bandwidth in MB
+                                        <div class="progress " >
+                                            <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" id="usedtransfer" style="width: 10%;"><span class="visually-hidden">90%</span></div>
+                                        </div>
+                                    </div>
+                                    <hr>
+<!--                                    <p><i class="fa fa-ticket fa-fw"></i> Total Bandwidth<br>-->
+<!--<span class="text-muted"><i class="fa fa-calendar fa-fw"></i> Used </span></p>-->
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex media">
+                                        <div></div>
+                                        <div class="media-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © DownDrive 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
